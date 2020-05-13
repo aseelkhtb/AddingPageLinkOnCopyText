@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+	<textarea name="textarea" rows="7" cols="50" placeholder="paste your copied text here"></textarea>
+
+	<script type="text/javascript">
+		document.addEventListener('copy', (event) => {
+		const pagelink = `\n\nRead more at: ${document.location.href}`;
+		event.clipboardData.setData('text', document.getSelection() + pagelink);
+		event.preventDefault();
+		});
+	</script>
+</body>
+</html>
